@@ -18,6 +18,5 @@
   optionNames = {options.map(o => o.value)}
   optionImages={options.map(o => o.image)}
   headerImage="https://via.placeholder.com/200"
-  headerText="Fruit Selector"
   selected={selectedOption}
 />

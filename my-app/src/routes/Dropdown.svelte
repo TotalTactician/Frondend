@@ -19,7 +19,6 @@
 
 <div class="dropdown-container">
   <div class="dropdown-header" on:click={toggleDropdown} style="background-image: url({headerImage})">
-    <div class="dropdown-header-text">{headerText}</div>
     <div class="dropdown-selected">{selected || "Select an option"}</div>
     <span class="dropdown-icon">{isOpen ? "▲" : "▼"}</span>
   </div>
