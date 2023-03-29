@@ -1,27 +1,62 @@
 <script lang="ts">
-	import BlueThing from "./BlueThing.svelte";
-	import GreenThing from "./GreenThing.svelte";
-	import RedThing from "./RedThing.svelte";
+	import BlueThingPage from "./BlueThingPage.svelte";
+	import RedThingPage from "./RedThingPage.svelte";
 
 	const options = [
-		{ color: 'red',   component: RedThing},
-		{ color: 'green', component: GreenThing},
-		{ color: 'blue',  component: BlueThing},
+		{ color: 'blue',  component: BlueThingPage},
+		{ color: 'red',  component: RedThingPage},
 	]
 
     let selected = options[0];
 </script>
+<h1>Component Library</h1>
+<div class="row">
+	<div id="CompList">
+		<h2>Componet List</h2>
+		<ul>
+			{#each options as option}
+			<li on:click={(event) => selected = option} >{option.color}</li>
+			{/each}
+		</ul> 
+	</div>
+	<div id="CompPage">
+		<svelte:component this={selected.component}/>
+	</div>
+</div>
+<style>
+	* {
+  		box-sizing: border-box;
+	}	
 
-<h1>Welcome to SvelteKit</h1>
-<div>
-    <select bind:value={selected}>
-        {#each options as option}
-            <option value={option}>{option.color}</option>
-        {/each}
-    </select>
-    
-    
-</div>
-<div>
-    <svelte:component this={selected.component}/>
-</div>
+	#CompList {
+		border: 2px solid red;
+		float: left;
+		width: 20%;
+		min-width: fit-content;
+		padding: 10px;
+	}
+
+	#CompList h2{
+		text-align: center;
+		color: white;
+		background-color: darkred;
+	}
+
+	#CompPage {
+		border: 2px solid red;
+		float: left;
+		width: 80%;
+		min-width: fit-content;
+		padding: 10px;
+	}
+
+	#CompList li{
+		font-size: x-large;
+	}
+
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}	
+</style>
