@@ -4,18 +4,62 @@
 </script>
 
 <h2>{title}</h2>
-<h3>Options</h3>
-<p>none</p>
-<h3>example</h3>
-<div  id="CompSlot">
-    <slot></slot>
-</div>
-<h3>Implimentation</h3>
-<p>{Implimentation}</p>
+<div id="Info">
+    <h3>Options</h3>
+    <p>none</p>
+    <h3>example</h3>
+    <div  id="CompSlot">
+        <slot></slot>
+    </div>
+    <h3>Implimentation</h3>
+    <p>{Implimentation}</p>
 
+    <h3>Options</h3>
+    <p>none</p>
+    <h3>example</h3>
+    <div  id="CompSlot">
+        <slot></slot>
+    </div>
+    <h3>Implimentation</h3>
+    <p>{Implimentation}</p><h3>Options</h3>
+    <p>none</p>
+    <h3>example</h3>
+    <div  id="CompSlot">
+        <slot></slot>
+    </div>
+    <h3>Implimentation</h3>
+    <p>{Implimentation}</p><h3>Options</h3>
+    <p>none</p>
+    <h3>example</h3>
+    <div  id="CompSlot">
+        <slot></slot>
+    </div>
+    <h3>Implimentation</h3>
+    <p>{Implimentation}</p><h3>Options</h3>
+    <p>none</p>
+    <h3>example</h3>
+    <div  id="CompSlot">
+        <slot></slot>
+    </div>
+    <h3>Implimentation</h3>
+    <p>{Implimentation}</p><h3>Options</h3>
+    <p>none</p>
+    <h3>example</h3>
+    <div  id="CompSlot">
+        <slot></slot>
+    </div>
+    <h3>Implimentation</h3>
+    <p>{Implimentation}</p>
+</div>
 
 <style>
     #CompSlot {
         border: 2px solid gray;
+    }
+
+    #Info {
+        height: 100vh;
+        min-height: fit-content;
+        overflow-y: auto;
     }
 </style>
