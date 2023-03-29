@@ -3,7 +3,6 @@
   export let optionImages: string[] = [];
   export let selected = "";
   export let headerImage = "";
-  export let headerText = "";
 
   let isOpen = false;
 
