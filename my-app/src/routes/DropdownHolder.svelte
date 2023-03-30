@@ -1,11 +1,23 @@
 <script lang=ts>
   import Dropdown from './Dropdown.svelte';
 
-  const options = [
-    { value: 'apple', image: 'https://via.placeholder.com/20' },
-    { value: 'banana', image: 'https://via.placeholder.com/20' },
-    { value: 'orange', image: 'https://via.placeholder.com/20' },
-  ]; //These are the factions
+  interface Faction {
+    name: string;
+    image: string;
+  }
+  
+  let options: Faction[] = []; //These are the factions
+
+  export let factionNames: string[] = ["bob", "steve"]
+  export let factionIcons: string[] = ["https://via.placeholder.com/20","https://via.placeholder.com/20"]
+  export let raceName = "Persons"
+  export let raceIcon = "https://via.placeholder.com/200"
+
+  for (let i = 0; i<factionNames.length; i++){
+    let option = {name: factionNames[i], image: factionIcons[i]}
+    options.push(option);
+  }
+  
 
   let selectedOption = '';
 
@@ -15,8 +27,9 @@
 </script>
 
 <Dropdown
-  optionNames = {options.map(o => o.value)}
+  optionNames = {options.map(o => o.name)}
   optionImages={options.map(o => o.image)}
-  headerImage="https://via.placeholder.com/200"
+  headerImage = {raceIcon}
+  headerText = {raceName}
   selected={selectedOption}
 />

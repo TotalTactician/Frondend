@@ -3,6 +3,7 @@
   export let optionImages: string[] = [];
   export let selected = "";
   export let headerImage = "";
+  export let headerText = "";
 
   let isOpen = false;
 
@@ -12,13 +13,14 @@
 
   function selectOption(option: string) {
     selected = option;
+    headerText = "";
     toggleDropdown();
   }
 </script>
 
 <div class="dropdown-container">
   <div class="dropdown-header" on:click={toggleDropdown} style="background-image: url({headerImage})">
-    <div class="dropdown-selected">{selected || "Select an option"}</div>
+    <div class="dropdown-selected">{selected || headerText}</div>
     <span class="dropdown-icon">{isOpen ? "▲" : "▼"}</span>
   </div>
   {#if isOpen}
@@ -53,14 +55,6 @@
     color: #fff;
     font-weight: bold;
     position: relative;
-  }
-
-  .dropdown-header-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
   }
 
   .dropdown-selected {

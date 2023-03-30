@@ -1,5 +1,6 @@
 <script>
-    import DropdownHolder from "../DropdownHolder.svelte";
+    import Dropdown from "../Dropdown.svelte";
+import DropdownHolder from "../DropdownHolder.svelte";
 </script>
 
 
