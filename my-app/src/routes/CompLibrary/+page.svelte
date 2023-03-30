@@ -15,9 +15,6 @@
 		<h2>Componet List</h2>
 		<div>
 			<ul>
-				{#each Array(50) as i}
-				<li>ssss</li>
-				{/each}
 				{#each options as option}
 				<li on:click={(event) => selected = option} >{option.name}</li>
 				{/each}
@@ -50,7 +47,7 @@
 		}
 
 		div {
-			height: 100%;
+			height: calc(100% - 50px);
 			overflow-y: auto;
 
 			li {

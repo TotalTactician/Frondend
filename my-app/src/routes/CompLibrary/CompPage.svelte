@@ -13,43 +13,6 @@
     </div>
     <h3>Implimentation</h3>
     <p>{Implimentation}</p>
-
-    <h3>Options</h3>
-    <p>none</p>
-    <h3>example</h3>
-    <div  id="CompSlot">
-        <slot></slot>
-    </div>
-    <h3>Implimentation</h3>
-    <p>{Implimentation}</p><h3>Options</h3>
-    <p>none</p>
-    <h3>example</h3>
-    <div  id="CompSlot">
-        <slot></slot>
-    </div>
-    <h3>Implimentation</h3>
-    <p>{Implimentation}</p><h3>Options</h3>
-    <p>none</p>
-    <h3>example</h3>
-    <div  id="CompSlot">
-        <slot></slot>
-    </div>
-    <h3>Implimentation</h3>
-    <p>{Implimentation}</p><h3>Options</h3>
-    <p>none</p>
-    <h3>example</h3>
-    <div  id="CompSlot">
-        <slot></slot>
-    </div>
-    <h3>Implimentation</h3>
-    <p>{Implimentation}</p><h3>Options</h3>
-    <p>none</p>
-    <h3>example</h3>
-    <div  id="CompSlot">
-        <slot></slot>
-    </div>
-    <h3>Implimentation</h3>
-    <p>{Implimentation}</p>
 </div>
 
 <style>
@@ -58,7 +21,7 @@
     }
 
     #Info {
-        height: 100vh;
+        height: calc(100% - 50px);
         min-height: fit-content;
         overflow-y: auto;
     }
