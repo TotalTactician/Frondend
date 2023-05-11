@@ -10,9 +10,14 @@ interface Race {
 export let races= writable<Race[]>([]);
 
 const getRaces = async () => {
-    var response = await fetch('http://127.0.0.1:3500/GetAll');
-    var result = await response.json();
-
+    try {
+        var response = await fetch('http://127.0.0.1:3500/GetAll');
+        var result = await response.json();
+    }
+    catch {
+        return races
+    }
+    
     result.Races.forEach( (newRace: { name: string; icon: string; factions: [];}) => {
 
         let factions: [] = newRace.factions;
@@ -29,6 +34,7 @@ const getRaces = async () => {
             return races;
         })
     })
+    
 }
 
 getRaces();
