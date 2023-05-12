@@ -1,6 +1,6 @@
 <script lang="ts">
   import DropdownHolder from "../DropdownHolder.svelte";
-  import { races } from "../../Stores/RaceStore";
+  import { races } from "../../../Stores/RaceStore";
 </script>
 
 

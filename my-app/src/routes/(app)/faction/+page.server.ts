@@ -1,4 +1,3 @@
-import { races } from "../../Stores/RaceStore"
 // const getRaces = async () => {
 //     var response = await fetch('http://localhost:3500/GetAll');
 //     var result = await response.json();
