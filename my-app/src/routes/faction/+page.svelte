@@ -1,8 +1,6 @@
-<script>
-    import Dropdown from "../Dropdown.svelte";
-    import DropdownHolder from "../DropdownHolder.svelte";
-    import { races } from "../../Stores/RaceStore";
-
+<script lang="ts">
+  import DropdownHolder from "../DropdownHolder.svelte";
+  import { races } from "../../Stores/RaceStore";
 </script>
 
 
@@ -10,7 +8,6 @@
 <a href="/units/greenskins">Greenskins</a>
 <a href="/units/empire">Empire</a>
 {#each $races as race}
-{console.log(race)}
 <DropdownHolder 
   raceName = {race.raceName}
   raceIcon = {race.raceIcon}
