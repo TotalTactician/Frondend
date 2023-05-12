@@ -6,13 +6,25 @@
 
 
 <h1>These are all the factions!</h1>
-<a href="/units/greenskins">Greenskins</a>
-<a href="/units/empire">Empire</a>
-{#each races as race}
-  <DropdownHolder 
+<div class = dropdown-list>
+  
+  {#each races as race}
+  <div class=drowdown>
+    <DropdownHolder 
     raceName = {race.raceName}
     raceIcon = {race.raceIcon}
     factionNames = {race.factionNames}
     factionIcons = {race.factionIcons}
-  />
-{/each}
+    />
+  </div>
+  {/each}
+</div>
+
+<style>
+  .dropdown-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 3000px;
+  }
+</style>
+

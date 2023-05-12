@@ -41,6 +41,7 @@
   .dropdown-container {
     position: relative;
     width: 200px;
+    padding: 10px;
   }
 
   .dropdown-header {
