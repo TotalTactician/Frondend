@@ -1,4 +1,4 @@
-FROM node:18 AS build
+FROM node:18-windowsservercore AS build
 
 WORKDIR /app
 
@@ -8,5 +8,5 @@ RUN npm install
 COPY . ./
 RUN npm run build
 
-FROM nginx:1.19-alpine
+FROM nginx:1.19-windowsservercore
 COPY --from=build /app/public /usr/share/nginx/html
