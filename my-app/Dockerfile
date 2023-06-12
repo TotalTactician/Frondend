@@ -1,5 +1,5 @@
 # Use the Windows version of Node.js as the base image
-FROM mcr.microsoft.com/windows/servercore
+FROM mcr.microsoft.com/windows/servercore:ltsc2019 AS build
 
 WORKDIR /app
 
